@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800,800italic,300" rel="stylesheet" type="text/css">
+<title>Now Feel Like Home While Roaming</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/flags.css" rel="stylesheet">
+<link href="css/call.css" rel="stylesheet">
+<style>
+.navbar-login {
+	width: 305px;
+	padding: 10px;
+	padding-bottom: 0px;
+}
+.navbar-login-session {
+	padding: 10px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+.icon-size {
+	font-size: 87px;
+}
+</style>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="loader-element" class="loading hide">Loading&#8230;</div>
+<div id="main">
+  <section class="header_main"> 
+    <!--navbar top-->
+    <div class="navbar " role="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a href="index.html" class="navbar-brand"><img src="images/talkmia_logo.png"  alt=" "></a> </div>
+          <div class="collapse navbar-collapse">
+            <div class="col-lg-6 col-sm-5 col-md-6 col-lg-offset-1">
+              <form class="navbar-form" role="search">
+                <div class="top_srch">
+                  <input class="form-control" placeholder="Search" name="q" type="text">
+                </div>
+              </form>
+            </div>
+            <ul class="nav navbar-nav navbar-right top_sgn">
+              <li> <a href="#" data-toggle="modal" data-target="#squarespaceModa2"><i class="fa fa-plus" aria-hidden="true"> </i>Signup</a> </li>
+              <li> <a href="#" data-toggle="modal" data-target="#squarespaceModal"><i class="fa fa-user" aria-hidden="true"></i>Signin</a> </li>
+              <li> <a href="#" data-toggle="modal" data-target="#squarespaceModa5"> <i class="fa fa-info" aria-hidden="true"></i> Help</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--header text start-->
+    
+    <div class="container">
+      <div class="clearfix"></div>
+      <h1>Now <span>Feel Like Home</span> While Roaming </h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard</p>
+      <div class="clearfix"></div>
+      <div class="want_to">
+        <div class="bdr">
+          <div class="srch_icn"><i class="fa fa-phone" aria-hidden="true"></i> </div>
+          <div class="box">
+            <input class="form-control input-lg" type="text" placeholder="Where you want to call?">
+          </div>
+          <div class="clearfix"></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="ent_btn">
+          <button type="button" id="submit" name="submit" class="btn btn-primary ">Enter</button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="poplp_des">
+        <h5>Popular Desitnations</h5>
+        <div class="flgimg"><a href="#" data-toggle="modal" data-target="#squarespaceModa4" onClick="getCountry('+91')"><img src="images/icn-1.png" width="30" height="30" alt=" "><br>
+          Ethipopia</a> </div>
+        <div class="flgimg"><a href="#" data-toggle="modal" data-target="#squarespaceModa4" onClick="getCountry('+91')"><img src="images/icn-2.png" width="30" height="30" alt=" "><br>
+          Nigeria</a> </div>
+        <div class="flgimg"><a href="#" data-toggle="modal" data-target="#squarespaceModa4" onClick="getCountry('+123')"> <img src="images/icn-3.png" width="30" height="30" alt=" "> <br>
+          Ghana</a> </div>
+      </div>
+    </div>
+  </section>
+  <section class="most_search">
+    <div class="container">
+      <h1>Most Searched <span>Countries</span></h1>
+      <div id="adv_gp_products_4_columns_carousel" class="carousel slide four_shows_one_move gp_products_carousel_wrapper" data-ride="carousel" data-interval="2000">
+        <div class="carousel-inner" role="listbox"> 
+          
+          <!--========= 1st slide =========-->
+          <div class="item active">
+            <div class="col-xs-12 col-sm-6 col-md-3 gp_products_item">
+              <div class="most_box">
+                <h4>Ethiopia</h4>
+                <img src="images/country-logo/country_logo2.png" width="67" height="67" alt=" ">
+                <h5>Unlimited calls
+                  in $10</h5>
+              </div>
+              <div class="most_boxlinks"> <a href="#availpop" data-toggle="modal">Avail</a> </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="col-xs-12 col-sm-6 col-md-3 gp_products_item">
+              <div class="most_box">
+                <h4>Ghana</h4>
+                <img src="images/country-logo/country_logo3.png" width="67" height="67" alt=" ">
+                <h5>Unlimited calls
+                  in $10</h5>
+              </div>
+              <div class="most_boxlinks"> <a href="#availpop" data-toggle="modal">Avail</a> </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="col-xs-12 col-sm-6 col-md-3 gp_products_item">
+              <div class="most_box">
+                <h4>US</h4>
+                <img src="images/country-logo/country_logo4.png" width="67" height="67" alt=" ">
+                <h5>Unlimited calls
+                  in $10</h5>
+              </div>
+              <div class="most_boxlinks"> <a href="#availpop" data-toggle="modal">Avail</a> </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="col-xs-12 col-sm-6 col-md-3 gp_products_item">
+              <div class="most_box">
+                <h4>India</h4>
+                <img src="images/country-logo/country_logo5.png" width="67" height="67" alt=" ">
+                <h5>Unlimited calls
+                  in $10</h5>
+              </div>
+              <div class="most_boxlinks"> <a href="#availpop" data-toggle="modal">Avail</a> </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--======= Navigation Buttons =========--> 
+        
+        <!--======= Left Button =========--> 
+        <a class="left carousel-control gp_products_carousel_control_left" href="#adv_gp_products_4_columns_carousel" role="button" data-slide="prev"> <span class="fa fa-angle-left gp_products_carousel_control_icons" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> 
+        
+        <!--======= Right Button =========--> 
+        <a class="right carousel-control gp_products_carousel_control_right" href="#adv_gp_products_4_columns_carousel" role="button" data-slide="next"> <span class="fa fa-angle-right gp_products_carousel_control_icons" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+    </div>
+  </section>
+  <section class="way_talkmia">
+    <div class="container">
+      <h1>Why Choose <span>Talkmia?</span></h1>
+      <div class="clearfix"></div>
+      <div class="col-lg-3 col-sm-3 col-md-3">
+        <div class="speech-bubble1"><span>Connects you to
+          4 corners of World</span>
+          <p> connect you to the 4 corners of World: North-East -South-west without roaming charge.</p>
+        </div>
+        <div class="speech-bubble2"><span>Free International Call</span>
+          <p> connect you to the 4 corners of World: North-East -South-west without roaming charge.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-6 col-md-6 text-center"><img src="images/man_lady.png" alt=" " class="img-responsive"></div>
+      <div class="col-lg-3 col-sm-3 col-md-3">
+        <div class="speech-bubble3"><span>Chat Text</span>
+          <p> connect you to the 4 corners of World: North-East -South-west without roaming charge.</p>
+        </div>
+        <div class="speech-bubble4"><span>Video Chat</span>
+          <p> connect you to the 4 corners of World: North-East -South-west without roaming charge.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="get_talkmia">
+    <div class="col-lg-5 col-sm-5 col-md-5"><img src="images/hand_mob.png" class="img-responsive hand_img" alt=" "></div>
+    <div class="col-lg-5 col-sm-7 col-md-6">
+      <h2>Get Talkmia <span>on your mobile, desktop and tv</span></h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standardLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+      <a href="#"><img src="images/app_store.png" width="193" height="56" alt=" "></a> <a href="#"><img src="images/google_play.png" width="193" height="56" alt=" "></a> </div>
+    <div class="clearfix"></div>
+  </section>
+  <section class="testimonl_part">
+    <div class="container">
+      <section id="carousel">
+        <div class="row">
+          <div class="col-md-9 col-md-offset-1">
+            <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+            <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000"> 
+              <!-- Carousel indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                <li data-target="#fade-quote-carousel" data-slide-to="2" ></li>
+              </ol>
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <div class="profile-circle"><img src="images/testi_man.jpg" alt=" "></div>
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                    <span>Robby, Maxico</span> </blockquote>
+                </div>
+                <div class="item">
+                  <div class="profile-circle" ><img src="images/testi_man.jpg" alt=" "></div>
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                    <span>Robby, Maxico</span> </blockquote>
+                </div>
+                <div class=" item">
+                  <div class="profile-circle"><img src="images/testi_man.jpg" alt=" "></div>
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                    <span>Robby, Maxico</span> </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+  <section class="footer_part">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-3 col-md-3">
+          <div class="footer_logo"> <a href="#"><img src="images/footer_logo.png" alt=" "></a>
+            <p>© 2017. All rights reserved. <br>
+              <a href="#">Privacy Policy</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-3 col-md-3">
+          <div class="footer_links">
+            <h4>About Talkmia</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Reseller Application</a></li>
+              <li><a href="#">Investors</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-3 col-md-3">
+          <div class="footer_links">
+            <h4>Site Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Reseller Application</a></li>
+              <li><a href="#">Investors</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-3 col-md-3">
+          <div class="footer_links">
+            <h4>Get Updates</h4>
+            <form action="" method="post">
+              <div class="form-group">
+                <input type="text" class="form-control input-lg" name="email" id="email"  placeholder="Enter your Email"/>
+              </div>
+              <button class="btn ">Subscribe Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- signin popup start -->
+
+<div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-login">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal"><img src="images/close.png" alt=" "></button>
+      <div class="modal-body modal-sgn">
+        <div class="sign_logo"> <a href="#"><img src="images/talkmia_logo.png" alt=" "></a>
+          <h3>Welcome Back!</h3>
+          <p>New to Talkmia? <a href="#squarespaceModa2" data-toggle="modal" data-dismiss="modal">Sign Up</a></p>
+        </div>
+        
+          <div class="form-group">
+            <div id="origin" data-input-name="origin"></div>
+          </div>
+          
+          
+        <div class="input-group phone-input form-group"> <span class="input-group-btn ">
+          <button type="button" class="btn btn-default dropdown-toggle input-lg" data-toggle="dropdown" aria-expanded="false"><span class="type-text">+91</span> <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a class="changeType" href="javascript:;" data-type-value="phone">+93</a></li>
+            <li><a class="changeType" href="javascript:;" data-type-value="fax">+355</a></li>
+            <li><a class="changeType" href="javascript:;" data-type-value="mobile">+213</a></li>
+          </ul>
+          </span>
+          <input name="phone[1][type]" class="type-input" value="" type="hidden">
+          <input name="phone[1][number]" class="form-control input-lg" placeholder="Enter Mobile Number" type="text">
+        </div>
+        <div class="form-group">
+          <input class="form-control input-lg"  placeholder="Pin" type="text">
+        </div>
+        <div class="sign_ft"> <a href="#signin" data-toggle="modal" data-dismiss="modal">Forgot Pin?</a>
+          <div class="checkbox checkbox-primary">
+            <input id="checkbox2" checked="" type="checkbox">
+            <label for="checkbox2"> Remeber Me </label>
+          </div>
+          <button type="submit" class="btn btn-default">Signin</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--signup popup-->
+
+<div class="modal fade" id="squarespaceModa2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-login">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal"><img src="images/close.png" alt=" "></button>
+      <div class="modal-body modal-sgn">
+        <div class="sign_logo"> <a href="#"><img src="images/talkmia_logo.png" alt=" "></a>
+          <h3>Welcome</h3>
+        </div>
+       
+          <div class="form-group">
+            <div id="origin1" data-input-name="origin1"></div>
+          </div>
+        
+        <div class="input-group phone-input form-group"> <span class="input-group-btn ">
+          <button type="button" class="btn btn-default dropdown-toggle input-lg" data-toggle="dropdown" aria-expanded="false"><span class="type-text">+91</span> <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a class="changeType" href="javascript:;" data-type-value="phone">+93</a></li>
+            <li><a class="changeType" href="javascript:;" data-type-value="fax">+355</a></li>
+            <li><a class="changeType" href="javascript:;" data-type-value="mobile">+213</a></li>
+          </ul>
+          </span>
+          <input name="phone[1][type]" class="type-input" value="" type="hidden">
+          <input name="phone[1][number]" class="form-control input-lg" placeholder="Enter Mobile Number" type="text">
+        </div>
+        <div class="form-group">
+          <input class="form-control input-lg"  placeholder="Enter Your Email Address" type="text">
+        </div>
+        <div class="form-group">
+          <input class="form-control input-lg"  placeholder="Pin" type="text">
+        </div>
+        <div class="form-group">
+          <input class="form-control input-lg"  placeholder="Confirm PIN" type="text">
+        </div>
+        <div class="sign_ft"> <br>
+          <div class="checkbox checkbox-primary">
+            <input id="checkbox3" checked="" type="checkbox">
+            <label for="checkbox3"> Remeber Me </label>
+          </div>
+          <button type="submit" class="btn btn-default">Signup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- top help -->
+
+<div class="modal fade" id="squarespaceModa5" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-login">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal"><img src="images/close.png" alt=" "></button>
+      <div class="modal-body modal-sgn help_pop">
+        <p>Fil up the form to send your query</p>
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control input-lg"  placeholder="Name*" type="text" required>
+          </div>
+          <div class="form-group">
+            <input class="form-control input-lg"  placeholder="Email Address*" type="email" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control input-lg" type="textarea"  placeholder="How may we assist you?" maxlength="140" rows="5"></textarea>
+          </div>
+          <div class="sign_ft">
+            <button type="submit" class="btn btn-default">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--forgot passowrd -->
+
+<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-login">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal"><img src="images/close.png" alt=" "></button>
+      <div class="modal-body modal-sgn">
+        <div class="sign_logo"> <a href="#"><img src="images/talkmia_logo.png" alt=" "></a>
+          <h3>Genrate New PIN</h3>
+        </div>
+        
+        
+          <div class="form-group">
+            <div id="origin2" data-input-name="origin2"></div>
+          </div>
+        
+        <div class="input-group phone-input form-group"> <span class="input-group-btn ">
+          <button type="button" class="btn btn-default dropdown-toggle input-lg" data-toggle="dropdown" aria-expanded="false"><span class="type-text">+91</span> <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a class="changeType" href="javascript:;" data-type-value="phone">+93</a></li>
+            <li><a class="changeType" href="javascript:;" data-type-value="fax">+355</a></li>
+            <li><a class="changeType" href="javascript:;" data-type-value="mobile">+213</a></li>
+          </ul>
+          </span>
+          <input name="phone[1][type]" class="type-input" value="" type="hidden">
+          <input name="phone[1][number]" class="form-control input-lg" placeholder="Enter Mobile Number" type="text">
+        </div>
+        <div class="sign_ft"> Click on the below button to send a new PIN on above mentioned mobile no. <br>
+          <button type="submit" class="btn btn-default">Send New Pin</button>
+          <a href="#squarespaceModal" data-toggle="modal" data-dismiss="modal" style="color: cornflowerblue">Back to Signin</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- make call popup-->
+
+<div class="modal fade" id="squarespaceModa4" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-call">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal"><img src="images/close.png" alt=" "></button>
+      <div class="modal-body modal-sgn">
+        <div class="mk_call">
+          <h5>Make a Call</h5>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        
+        <div class="plan_slt">
+							<div class="wrap-select">
+					<div id="dd" class="wrapper-dropdown-3">
+						<span>Choose other Country</span>
+						<ul class="dropdown">
+							<li><a href="#" data-code="+91">India</a></li>
+							<li><a href="#" data-code="+251">Ethiopia</a></li>
+							<li><a href="#" data-code="+234">Nigeria</a></li>
+							<li><a href="#" data-code="+233">Ghana</a></li>
+							<li><a href="#" data-code="+1">US</a></li>
+							<li><a href="#" data-code="+1">Jamaica</a></li>
+							<li><a href="#" data-code="+52">Maxico</a></li>
+														
+						</ul>
+					</div>
+				</div>
+						
+					</div>
+        <div class="input-group phone-input form-group"> <span class="input-group-btn ">
+          <button type="button" class="btn btn-default dno input-lg"><span class="type-text" id="calling-country-code">+1</span></button>
+         <!-- <ul class="dropdown-menu" role="menu">
+            <li><a class="changeType" href="javascript:;" data-type-value="phone">+93</a></li>
+            <li><a class="changeType" href="javascript:;" data-type-value="fax">+355</a></li>
+            <li><a class="changeType" href="javascript:;" data-type-value="mobile">+213</a></li>
+          </ul>-->
+          </span>
+          <input name="phone[1][type]" class="type-input" value="" type="hidden">
+          <input id="called-number" name="phone[1][number]" class="form-control input-lg" placeholder="Enter a no. you want to call with country code" type="text">
+        </div>
+        <div class="mk_callbtn">
+          <a class="call-btns" id="call" href="#">Call Now</a>
+          <a class="call-btns" id="hangup" href="#">Hangup</a>
+          <audio id="incoming" autoplay></audio>
+          <audio id="ringback" src='ringtones/ringback.wav' loop></audio>
+          <audio id="ringtone" src='ringtones/phone_ring.wav' loop></audio>
+        </div>
+        <div id="callLog" class="panel">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- most search country Avail popup-->
+
+<div class="modal fade" id="availpop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-call">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal"><img src="images/close.png" alt=" "></button>
+      <div class="modal-body modal-sgn">
+        <div class="avail_title">
+          <h5>World <span>Credit</span></h5>
+          <p>Cheepest possible rates to call India</p>
+          <h3>India</h3>
+          <img src="images/world.png">
+        </div>
+        
+       <div class="s_myradio"> 
+        <form>
+        
+        	<ul>
+  <li>
+    <input type="radio" id="f-option" name="selector">
+    <label for="f-option">10 min</label><span>$5</span>
+    
+    <div class="check"></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="t-option" name="selector">
+    <label for="t-option">20 min</label><span>$10</span>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+        </ul>
+        
+        <div class="avl_btn">
+        	<button type="button" class="btn btn-primary">Avail</button>
+        </div>
+        </form>
+        </div>
+        
+        
+        <div class="show_allr"> <a href="#">Show all rates</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.flagstrap.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.min.js"></script>
+<link href="css/responsive_bootstrap_carousel_mega_min.css" rel="stylesheet" media="all">
+<script src="js/jquery.touchSwipe.min.js"></script> 
+
+<!--======= Customize =========--> 
+<script src="js/responsive_bootstrap_carousel.js"></script> 
+<!-- sinch -->
+<script src="js/sinch.min.js"></script>
+<script src="js/web-script.js"></script>
+
+
+
+<!-- sinch -->
+<script>
+function getCountry(obj){
+//alert('dd');
+
+ $('#calling-country-code').text(obj);
+            $('#called-number').attr('data-code', obj);
+			
+}
+
+    $('#basic').flagStrap();
+
+    $('#origin').flagStrap({
+        placeholder: {
+            value: "",
+            text: "Country of origin"
+        }
+    });
+	
+	$('#origin1').flagStrap({
+        placeholder: {
+            value: "",
+            text: "Country of origin"
+        }
+    });
+	
+	$('#origin2').flagStrap({
+        placeholder: {
+            value: "",
+            text: "Country of origin"
+        }
+    });
+
+    $('#options').flagStrap({
+        countries: {
+            "AU": "Australia",
+            "GB": "United Kingdom",
+            "US": "United States"
+        },
+        buttonSize: "btn-sm",
+        buttonType: "btn-info",
+        labelMargin: "10px",
+        scrollable: false,
+        scrollableHeight: "350px"
+    });
+
+    $('#advanced').flagStrap({
+        buttonSize: "btn-lg",
+        buttonType: "btn-primary",
+        labelMargin: "20px",
+        scrollable: false,
+        scrollableHeight: "350px",
+        onSelect: function (value, element) {
+            alert(value);
+            console.log(element);
+        }
+    });
+
+</script>
+
+<script>
+	    		function DropDown(el) {
+				this.dd = el;
+				this.placeholder = this.dd.children('span');
+				this.opts = this.dd.find('.dropdown a');
+				this.val = '';
+				this.index = -1;
+				this.initEvents();
+			}
+			DropDown.prototype = {
+				initEvents : function() {
+					var obj = this;
+
+					obj.dd.on('click', function(event){
+						$(this).toggleClass('active');
+						return false;
+					});
+
+					obj.opts.on('click',function(){
+						var opt = $(this);
+						obj.val = opt.text();
+						obj.index = opt.index();
+            $('#calling-country-code').text(opt.data('code'));
+            $('#called-number').attr('data-code', opt.data('code'));
+						obj.placeholder.text(obj.val);
+					});
+				},
+				getValue : function() {
+					return this.val;
+				},
+				getIndex : function() {
+					return this.index;
+				}
+			}
+
+			$(function() {
+
+				var dd = new DropDown( $('#dd') );
+
+
+
+			});
+	</script>
+</body>
+</html>
